@@ -1,5 +1,18 @@
 [{
-    "name" : "unknown" , 
-    "age" : "3" ,
-    "nu" : "dsf2"
+    "gate" : {
+        "7408" : { 
+                    "name" : "AND" ,
+                    "table" : [
+                        {"input" : [0,0] , "output" : [1]} ,
+                        {"input" : [0,0] , "output" : [1]} 
+                    ]
+        } ,
+        "7404" : {
+                    "name" : "NOT" ,
+                    "table" : [
+                        {"input" : [0] , "output" : [1]} ,
+                        {"input" : [1] , "output" : [0]}
+                    ] 
+        }
+    }
 }]

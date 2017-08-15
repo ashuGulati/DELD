@@ -20,3 +20,15 @@ function init() {
 }
 
 init() ;
+
+function Vector(x,y) {
+    this.x = x ;
+    this.y = y ;
+}
+
+
+function Button(x , y , w , h) {
+    var topLeft = new Vector(x , y) ;
+    var bottomRight = new Vector(x+w , y-h ) ;
+    
+}
