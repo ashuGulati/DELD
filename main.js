@@ -2,6 +2,7 @@
 var c = document.getElementById("toolkit");
 var ctx = c.getContext("2d");
 
+
 window.onload = function() { // This functions whenever the page is loaded
     Draw() ;
 }
@@ -11,13 +12,13 @@ function Draw() { // A normal function which inclues complete draw method
     var x , y , radius ;
     x = 40 ;
     y = 20 ;
-    radius = 10 ;
+    radius = 20 ;
     
-    for(var i = 0 ; i < 5 ; i++) {   
+    for(var i = 0 ; i < 10 ; i++) {   
         ctx.moveTo(x+radius , y+radius);
         ctx.arc(x  , y+radius , radius , 0 , 2*Math.PI);
         ctx.stroke();
-        x+=45;
+        x += 45;
     }
     //to draw a line in canvas
     ctx.moveTo(0,80);
@@ -72,6 +73,28 @@ function mousePos(event){//when we click on ccanvas this functuion is called
     } 
 }
 
+<<<<<<< HEAD
+function Vector(someX , someY) {
+    this.x = someX ;
+    this.y = someY ;
+}
+
+var time = new Vector(10 ,120) ;
+
+console.log(time) ;
+
+function OnMouseClick(mouseData) {
+    var x = mouseData.clientX ;
+    var y = mouseData.clientY ;
+    
+    var MousePosition = new Vector(x,y) ;
+//    console.log("x : "+x+" y :"+y) ;
+}
+
+c.addEventListener("click" , OnMouseClick) ;
+
+console.log("Script was succesfully executed") ;
+=======
     function isInside( pos, rect){//to check mouse pos and rectangle pos
         if  ( (pos.x > rect.x) && (pos.x < (rect.x+rect.w)) )
               if(( pos.y < (rect.y+rect.h) && (pos.y > rect.y)))
@@ -126,3 +149,4 @@ for(var i=0;i<5;i++){
 
 
 
+>>>>>>> c071f29d12cb3800e5102668b8947a32ab446aa8
