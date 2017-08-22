@@ -1,3 +1,5 @@
+var data_JSON ; 
+
 function loadJSON(callback) {   
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
@@ -11,24 +13,19 @@ function loadJSON(callback) {
     xobj.send(null);  
  }
 
-function init() {
+function load_data() {
  loadJSON(function(response) {
   // Parse JSON string into object
-    var actual_JSON = JSON.parse(response);
-     console.log(actual_JSON);
+     data_JSON = JSON.parse(response);
+     
+     
+  //   console.log(data_JSON);
  });
 }
 
-init() ;
-
-function Vector(x,y) {
-    this.x = x ;
-    this.y = y ;
-}
-
-
-function Button(x , y , w , h) {
-    var topLeft = new Vector(x , y) ;
-    var bottomRight = new Vector(x+w , y-h ) ;
-    
-}
+load_data() ;
+//window.onload = funtion(){
+//    load_data() ;
+//        
+//    
+//}
